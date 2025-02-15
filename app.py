@@ -1,10 +1,18 @@
 
 import streamlit as st
 import pickle
+import os
+
+# Ensure nltk is installed
+os.system("pip install nltk")
+
+import streamlit as st
+import pickle
 import re
 import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
+
+# Download required nltk datasets
+
 
 # Load pre-trained model and TF-IDF vectorizer
 clf = pickle.load(open('clf.pkl', 'rb'))
